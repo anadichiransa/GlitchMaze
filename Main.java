@@ -9,6 +9,12 @@ public class Main {
         window.setResizable(false);
         window.setTitle("The Glitch Maze");
 
+        window.setSize(800,600);
+
+        window.setLocationRelativeTo(null);//centers the window
+        window.setVisible(true);
+
+
 
     }
 }
