@@ -5,4 +5,11 @@ import java.awt.Graphics;
 
 public class GamePanel extends JPanel{
 
+    //Screen settings
+    final int tileSize = 32;
+    final int maxScreenCol = 20;
+    final int maxScreenRow = 15;
+    final int screenWidth = tileSize * maxScreenCol;
+    final int screenHeight = tileSize * maxScreenRow;
+
 }
