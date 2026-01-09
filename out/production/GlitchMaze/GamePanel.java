@@ -28,6 +28,35 @@ public class GamePanel extends JPanel{
                 map[x][y] =0 ;
             }
         }
+
+        //Drunken Wall Algorithm
+        Random rand = new Random();
+        int x = maxScreenCol/2;
+        int y = maxScreenRow/2;
+        int steps = 200;
+
+        for(int k =0;k<steps;k++) {
+            map[x][y] = 1; //Curving the path
+
+            int random_dir = rand.nextInt(4);
+
+            if(random_dir == 0 && y>1 ) {
+                y--;
+            }
+
+            else if (random_dir == 1 && y< maxScreenRow){
+                y++;
+            }
+
+            else if (random_dir == 2 && x>1){
+                x--;
+            }
+
+            else if (random_dir ==3 && maxScreenCol -2 ){
+                x++;
+            }
+
+        }
     }
     @Override
     public void paintComponent(Graphics g){
@@ -43,6 +72,10 @@ public class GamePanel extends JPanel{
 
 
 
+
+
 }
+
+
 
 
