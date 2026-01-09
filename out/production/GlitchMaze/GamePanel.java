@@ -1,7 +1,6 @@
 import javax.swing.JPanel;
-import java.awt.color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.*;
+import java.awt.Color;
 
 public class GamePanel extends JPanel{
 
@@ -18,4 +17,19 @@ public class GamePanel extends JPanel{
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
     }
+
+    @Override
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+
+        g.setColor(Color.DARK_GRAY);
+        for (int i =0 ; i< maxScreenCol; i++){
+            for(int j=0; j<maxScreenRow; j++){
+                g.drawRect(i*tileSize, j*tileSize,tileSize,tileSize);
+            }
+        }
+    }
+
+
+
 }

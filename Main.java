@@ -1,5 +1,6 @@
 import javax.swing.*;
 
+
 public class Main {
     public static void main(String[] args){
 
@@ -9,12 +10,12 @@ public class Main {
         window.setResizable(false);
         window.setTitle("The Glitch Maze");
 
-        window.setSize(800,600);
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+
+        window.pack();
 
         window.setLocationRelativeTo(null);//centers the window
         window.setVisible(true);
-
-
-
     }
 }
